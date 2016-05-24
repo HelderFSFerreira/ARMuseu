@@ -1,5 +1,6 @@
 package com.example.helde.armuseu;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnLogin (View view) {
-        System.out.println("entrei aqui");
         EditText etLogin = (EditText) findViewById(R.id.etUser);
         EditText etPass = (EditText) findViewById(R.id.etPass);
 
@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(etPass.getText().toString());
 
         if(checkLogin(etLogin.getText().toString(),etPass.getText().toString())){
-            //proximo painel
+            Intent intent = new Intent(view.getContext(), ObraActivity.class);
+            startActivityForResult(intent,1);
         }
 
     }
