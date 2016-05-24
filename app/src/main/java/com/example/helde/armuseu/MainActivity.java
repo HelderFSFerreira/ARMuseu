@@ -8,7 +8,7 @@ import android.widget.EditText;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    ArrayList<Utilizador> uti = new ArrayList<Utilizador>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         Utilizador u;
         u = new Utilizador("Helder","wn","123");
-        utilizadores.add(u);
+        uti.add(u);
 
 
 
@@ -48,9 +48,26 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(etLogin.getText().toString());
         System.out.println(etPass.getText().toString());
 
+        if(checkLogin(etLogin.getText().toString(),etPass.getText().toString())){
+            System.out.println("entraaaafjnahfagahbigaganojf");
+        }
+
     }
 
     public boolean checkLogin(String user, String pass) {
-        return true;
+        boolean retorno = false;
+        for(Utilizador u : uti){
+            if(u.getUserName().equals(user) && u.getPassword().equals(pass)){
+                retorno = true;
+            }else{
+                retorno = false;
+            }
+        }
+        return retorno;
+    }
+
+    private void carregarDados(){
+
+
     }
 }
