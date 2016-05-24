@@ -8,36 +8,15 @@ import android.widget.EditText;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ArrayList<Utilizador> uti = new ArrayList<Utilizador>();
+    //utilizadores
+    ArrayList<Utilizador> utilizadores = new ArrayList<Utilizador>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<Utilizador> utilizadores = new ArrayList<Utilizador>();
 
-        Utilizador u;
-        u = new Utilizador("Helder","wn","123");
-        uti.add(u);
-
-
-
-
-        /*ListView listaMuseus = (ListView) findViewById(R.id.listaObras);
-        ArrayList<Obra> ArrayDadosMuseu = new ArrayList<Obra>();
-        Obra obras;
-
-
-        obras = new Obra("MonaLisa", "Uma obra muita fantastica!! Venha aprecisar!!",getResources().getDrawable(R.drawable.m));
-        ArrayDadosMuseu.add(obras);
-        obras = new Obra("MonaDeslisa", "Uma obra muita fantastica!! Venha aprecisar!!",getResources().getDrawable(R.drawable.m2));
-        ArrayDadosMuseu.add(obras);
-        obras = new Obra("MonaLisa", "Uma obra muita fantastica!! Venha aprecisar!!",getResources().getDrawable(R.drawable.m));
-        ArrayDadosMuseu.add(obras);
-
-        ObraAdapter adapter = new ObraAdapter(this, ArrayDadosMuseu);
-
-        listaMuseus.setAdapter(adapter);*/
     }
 
     public void btnLogin (View view) {
@@ -49,14 +28,14 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(etPass.getText().toString());
 
         if(checkLogin(etLogin.getText().toString(),etPass.getText().toString())){
-            System.out.println("entraaaafjnahfagahbigaganojf");
+            //proximo painel
         }
 
     }
 
     public boolean checkLogin(String user, String pass) {
         boolean retorno = false;
-        for(Utilizador u : uti){
+        for(Utilizador u : utilizadores){
             if(u.getUserName().equals(user) && u.getPassword().equals(pass)){
                 retorno = true;
             }else{
