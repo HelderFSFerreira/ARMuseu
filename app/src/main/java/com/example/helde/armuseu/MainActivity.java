@@ -47,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
 
         System.out.println(etLogin.getText().toString());
         System.out.println(etPass.getText().toString());
+
     }
 
-    //awdawdpublic boolean cec
+    public boolean checkLogin(String user, String pass) {
+        return true;
+    }
 }
