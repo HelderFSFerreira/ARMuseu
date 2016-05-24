@@ -46,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
         return retorno;
     }
 
+    public void btnRegister (View view) {
+        Intent intent = new Intent(view.getContext(), RegistarActivity.class);
+        startActivityForResult(intent,0);
+    }
+
     private void carregarDados(){
     }
 }
