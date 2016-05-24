@@ -20,6 +20,11 @@ public class MuseuAdapter extends BaseAdapter {
 
     protected ArrayList<Museu> museus;
 
+    public MuseuAdapter(Activity activity, ArrayList<Museu> Museus){
+        this.activity = activity;
+        this.museus = Museus;
+    }
+
     @Override
     public int getCount() {
         return museus.size();

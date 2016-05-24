@@ -12,11 +12,13 @@ public class Obra {
     private String nome;
     private String descricao;
     private Drawable imagem;
+    private int museu;
 
-    public Obra(String name, String descricao, Drawable img){
+    public Obra(String name, String descricao, Drawable img,int museu){
         this.nome = name;
         this.descricao = descricao;
         this.imagem = img;
+        this.museu=museu;
     }
 
     // getters
