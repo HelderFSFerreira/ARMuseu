@@ -32,7 +32,4 @@ public class MainActivity extends AppCompatActivity {
         listaMuseus.setAdapter(adapter);
 
         }
-    private void testUpload () {
-        int i = 1 + 1;
-    }
 }
