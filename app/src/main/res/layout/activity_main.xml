@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/etPass"
         android:hint="Password"
         android:gravity="center_horizontal"/>
 
@@ -37,7 +37,8 @@
         android:layout_height="wrap_content"
         android:text="LogIn"
         android:id="@+id/btnLogin"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:onClick="btnLogin"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

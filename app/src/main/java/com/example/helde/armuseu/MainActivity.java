@@ -2,7 +2,8 @@ package com.example.helde.armuseu;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 
@@ -13,9 +14,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ArrayList<Utilizador> utilizadores = new ArrayList<Utilizador>();
+
+        Utilizador u;
+        u = new Utilizador("Helder","wn","123");
+        utilizadores.add(u);
 
 
-        ListView listaMuseus = (ListView) findViewById(R.id.listaObras);
+
+
+        /*ListView listaMuseus = (ListView) findViewById(R.id.listaObras);
         ArrayList<Obra> ArrayDadosMuseu = new ArrayList<Obra>();
         Obra obras;
 
@@ -29,7 +37,17 @@ public class MainActivity extends AppCompatActivity {
 
         ObraAdapter adapter = new ObraAdapter(this, ArrayDadosMuseu);
 
-        listaMuseus.setAdapter(adapter);
+        listaMuseus.setAdapter(adapter);*/
+    }
 
-        }
+    public void btnLogin (View view) {
+        System.out.println("entrei aqui");
+        EditText etLogin = (EditText) findViewById(R.id.etUser);
+        EditText etPass = (EditText) findViewById(R.id.etPass);
+
+        System.out.println(etLogin.getText().toString());
+        System.out.println(etPass.getText().toString());
+    }
+
+    //awdawdpublic boolean cec
 }
