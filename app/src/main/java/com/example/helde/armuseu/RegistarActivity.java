@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 /**
  * Created by helde on 24/05/2016.
  */
@@ -42,8 +40,7 @@ public class RegistarActivity extends AppCompatActivity {
         }
 
 
-        boolean passesIguais = p1.equals(p2);
-
+        boolean passesIguais = p1.equals(p2); //Tive de fazer assim porque a comparação estava a dar sempre falso.
         if (!passesIguais) {
             Toast passVazia = Toast.makeText(getApplicationContext(),"As passwords não são iguais",Toast.LENGTH_SHORT);
             passouVerificacao=false;
