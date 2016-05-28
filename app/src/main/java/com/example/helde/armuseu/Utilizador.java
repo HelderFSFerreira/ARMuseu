@@ -1,9 +1,11 @@
 package com.example.helde.armuseu;
 
+import java.io.Serializable;
+
 /**
  * Created by helde on 24/05/2016.
  */
-public class Utilizador {
+public class Utilizador implements Serializable {
     private String nome;
     private String userName;
     private String password;

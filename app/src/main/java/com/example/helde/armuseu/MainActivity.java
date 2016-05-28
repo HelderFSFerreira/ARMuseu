@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        carregarDados();
 
         final TextView registerLink = (TextView) findViewById(R.id.tvRegister);
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent registerIntent = new Intent(MainActivity.this,RegistarActivity.class);
+                registerIntent.putExtra("utilizadores",utilizadores);
                 MainActivity.this.startActivity(registerIntent);
             }
         });
