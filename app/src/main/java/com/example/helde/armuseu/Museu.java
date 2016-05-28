@@ -43,6 +43,7 @@ public class Museu {
     public void setNome(String nome){
         this.nome = nome;
     }
+
     public void setDescricao(String desc){
         this.descricao = desc;
     }

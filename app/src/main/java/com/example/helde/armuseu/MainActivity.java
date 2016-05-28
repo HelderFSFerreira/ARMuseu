@@ -58,5 +58,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void carregarDados(){
+        Utilizador u1 = new Utilizador("Administrador","admin","pass");
+        Utilizador u2 = new Utilizador("Moderador", "mod","pass");
+
+        utilizadores.add(u1);
+        utilizadores.add(u2);
+
     }
 }

@@ -9,5 +9,4 @@
         android:id="@+id/listaMuseus"
         android:layout_gravity="center_vertical"
         android:layout_weight="1" />
-
 </LinearLayout>
