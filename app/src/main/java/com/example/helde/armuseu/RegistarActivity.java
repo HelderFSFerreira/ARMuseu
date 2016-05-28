@@ -1,5 +1,6 @@
 package com.example.helde.armuseu;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -12,10 +13,12 @@ import java.util.ArrayList;
  * Created by helde on 24/05/2016.
  */
 public class RegistarActivity extends AppCompatActivity {
+    DataBaseHelper myDb;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registar_activity);
+        myDb = new DataBaseHelper(this);
 
 
     }
@@ -25,10 +28,9 @@ public class RegistarActivity extends AppCompatActivity {
         final EditText userName = (EditText) findViewById(R.id.etUser);
         final EditText pass1 = (EditText) findViewById(R.id.etPass1);
         final EditText pass2 = (EditText) findViewById(R.id.etPass2);
-        ArrayList<Utilizador> utilizadores = (ArrayList<Utilizador>) getIntent().getSerializableExtra("utilizadores");  // recebe os utilizadores
 
-        String n = nome.getText().toString();
-        String p1 = pass1.getText().toString();  // tive de definir aqui e não no if abaixo porque estava a ter erros de comparação
+        String n = nome.getText().toString(); //Passagem para String de todas as variaveis.
+        String p1 = pass1.getText().toString();
         String p2 = pass2.getText().toString();
         String userName1 = userName.getText().toString();
 
@@ -51,28 +53,22 @@ public class RegistarActivity extends AppCompatActivity {
         // Verifica se o utilizador já está registado
 
 
-
-        boolean verificacaoUtilizador=false;
-        for (int i=0;i<utilizadores.size();i++) {
-            Utilizador u = utilizadores.get(i);
-            if (u.getUserName().equals(userName1)) {
-                verificacaoUtilizador=true;
-                passouVerificacao=false;
-            }
-        }
-
-        if (verificacaoUtilizador==true) {
-            Toast passUserExistente = Toast.makeText(getApplicationContext(),"Já existe um utilizador com esse nome",Toast.LENGTH_SHORT);
+        Cursor res1 = myDb.verificaUser(userName1);
+        if (res1.getCount()!=0) {
             passouVerificacao=false;
-            passUserExistente.show();
+            Toast.makeText(RegistarActivity.this,"Já existe um utilizador com esse UserName", Toast.LENGTH_LONG).show();
         }
+
+        //Insere o utilizador na base de dados
 
         if (passouVerificacao==true) {
-            Utilizador u = new Utilizador(n,userName1,p1);
-            utilizadores.add(u);
-            Toast utilizadorRegistado = Toast.makeText(getApplicationContext(),n+" foi registado",Toast.LENGTH_SHORT);
-            utilizadorRegistado.show();
-            finish();
+            boolean isInserted = myDb.insertData(n,userName1,p1);
+            if(isInserted ==true) {
+                Toast.makeText(RegistarActivity.this, userName1 + " foi registado", Toast.LENGTH_LONG).show();
+                finish();
+            } else {
+                Toast.makeText(RegistarActivity.this, "Erro no acesso à BD", Toast.LENGTH_LONG).show();
+            }
         }
     }
 }

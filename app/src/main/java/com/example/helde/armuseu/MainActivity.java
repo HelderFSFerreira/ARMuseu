@@ -1,23 +1,24 @@
 package com.example.helde.armuseu;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    //utilizadores
-    ArrayList<Utilizador> utilizadores = new ArrayList<Utilizador>();
+    DataBaseHelper myDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        carregarDados();
+        myDB = new DataBaseHelper(this);
 
         final TextView registerLink = (TextView) findViewById(R.id.tvRegister);
 
@@ -25,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent registerIntent = new Intent(MainActivity.this,RegistarActivity.class);
-                registerIntent.putExtra("utilizadores",utilizadores);
                 MainActivity.this.startActivity(registerIntent);
             }
         });
@@ -37,32 +37,23 @@ public class MainActivity extends AppCompatActivity {
         EditText etLogin = (EditText) findViewById(R.id.etUser);
         EditText etPass = (EditText) findViewById(R.id.etPass);
 
-        System.out.println(etLogin.getText().toString());
-        System.out.println(etPass.getText().toString());
-
         if(checkLogin(etLogin.getText().toString(),etPass.getText().toString())){
             Intent intent = new Intent(view.getContext(), ObraActivity.class);
             startActivityForResult(intent,1);
+        } else {
+            etLogin.setText("");
+            etPass.setText("");
+            Toast.makeText(MainActivity.this, "Erro nas credencias de acesso", Toast.LENGTH_LONG).show();
         }
 
     }
 
     public boolean checkLogin(String user, String pass) {
-        boolean retorno = false;
-        for(Utilizador u : utilizadores){
-            if(u.getUserName().equals(user) && u.getPassword().equals(pass)){
-                retorno = true;
-            }else{
-                retorno = false;
-            }
+        Cursor res = myDB.checkLogIN(user,pass);
+        if (res.getCount()==0) {
+            return false;
+        } else {
+            return true;
         }
-        return retorno;
-    }
-
-    private void carregarDados(){
-        Utilizador u1 = new Utilizador("Administrador","admin","pass");
-        Utilizador u2 = new Utilizador("Moderador", "mod","pass");
-        utilizadores.add(u1);
-        utilizadores.add(u2);
     }
 }
