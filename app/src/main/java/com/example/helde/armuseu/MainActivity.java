@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(etPass.getText().toString());
 
         if(checkLogin(etLogin.getText().toString(),etPass.getText().toString())){
-            Intent intent = new Intent(view.getContext(), ObraActivity.class);
+            Intent intent = new Intent(view.getContext(), HomeActivity.class);
             startActivityForResult(intent,1);
         }
 
