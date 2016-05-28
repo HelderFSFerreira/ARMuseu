@@ -2,6 +2,7 @@ package com.example.helde.armuseu;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.EditText;
 
 /**
@@ -16,9 +17,9 @@ public class RegistarActivity extends AppCompatActivity {
         final EditText userName = (EditText) findViewById(R.id.etUser);
         final EditText pass1 = (EditText) findViewById(R.id.etPass1);
         final EditText pass2 = (EditText) findViewById(R.id.etPass2);
+    }
 
-
-
+    public void btnRegistar (View view) {
 
     }
 }
