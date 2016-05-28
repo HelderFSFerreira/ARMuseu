@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final TextView registerLink = (TextView) findViewById(R.id.tvRegister);
+
+        registerLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent registerIntent = new Intent(MainActivity.this,RegistarActivity.class);
+                MainActivity.this.startActivity(registerIntent);
+            }
+        });
 
 
     }
@@ -44,11 +55,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return retorno;
-    }
-
-    public void btnRegister (View view) {
-        Intent intent = new Intent(view.getContext(), RegistarActivity.class);
-        startActivityForResult(intent,0);
     }
 
     private void carregarDados(){

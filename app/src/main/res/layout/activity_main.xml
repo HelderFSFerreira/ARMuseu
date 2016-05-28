@@ -44,6 +44,6 @@
         android:layout_height="wrap_content"
         android:text="Register"
         android:layout_gravity="center_horizontal"
-        android:onClick="btnRegister"/>
+        android:id="@+id/tvRegister"/>
 
 </LinearLayout>
