@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,6 +44,10 @@ public class MuseusFragment extends ListFragment {
         setListAdapter(mAdapter);
         setRetainInstance(true);
         return rootView;
+    }
+
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        Toast.makeText(getActivity(), getListView().getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
     }
 
 }
