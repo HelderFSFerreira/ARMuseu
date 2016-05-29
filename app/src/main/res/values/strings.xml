@@ -13,6 +13,11 @@
     <string name="obrafragment">Obras Fragment</string>
     <string name="museufragment">Museus Fragment</string>
     <string name="infofragment">Info Fragment</string>
+    <string name="descricao">O Museu da Água localiza-se na freguesia de São Vicente, na cidade, concelho e distrito de Lisboa, em Portugal.
+
+É um museu histórico-cultural mantido pela empresa EPAL, cujo acervo versa sobre a história do abastecimento de água a Lisboa, e está instalado nas dependências da Estação Elevatória a Vapor dos Barbadinhos, primeira estação de bombagem a vapor da cidade.
+
+A instituição homenageia Manuel da Maia, engenheiro do século XVIII que projetou o Aqueduto das Águas Livres. A excelente disposição do museu fê-lo ganhar o prémio do Conselho da Europa em 1990. O lugar de honra vai para os bem preservados motores a vapor, um dos quais funciona a electricidade e pode ser ligado para os visitantes. O desenvolvimento da tecnologia é documentado por fotografias. São particularmente interessantes aquelas dedicadas ao Aqueduto das Águas Livres e ao Chafariz de El-Rei do século XVII, em Alfama, onde a população fazia fila em frente de uma de seis bicas, conforme o estatuto social.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
