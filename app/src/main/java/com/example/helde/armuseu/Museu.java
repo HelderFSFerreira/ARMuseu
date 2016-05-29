@@ -3,10 +3,12 @@ package com.example.helde.armuseu;
 
 import android.graphics.drawable.Drawable;
 
+import java.io.Serializable;
+
 /**
  * Created by Nelson on 24/05/2016.
  */
-public class Museu {
+public class Museu implements Serializable {
     int id_museu;
     String nome;
     String descricao;
