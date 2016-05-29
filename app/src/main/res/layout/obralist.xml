@@ -46,17 +46,6 @@
             android:id="@+id/linearLayout">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Descrição"
-                android:id="@+id/desc"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:paddingTop="20dp"
-                android:layout_gravity="center_vertical" />
-
-            <TextView
                 android:layout_width="376dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"

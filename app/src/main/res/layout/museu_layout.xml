@@ -47,7 +47,8 @@
             android:layout_gravity="right"
             android:padding="15dp"
             android:src="@drawable/ic_add_shopping_cart_black_24dp"
-            android:id="@+id/imageButton" />
+            android:id="@+id/imageButton"
+            android:onClick="btnClicarComprar"/>
 
         <RatingBar
             android:layout_width="wrap_content"

@@ -20,4 +20,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtInicial">Este trabalho foi elaborado por\n
+    Helder Ferreira Nº16932\n
+    Nelson Rodrigues Nº ALTERAR</string>
 </resources>
