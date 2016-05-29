@@ -4,10 +4,12 @@ import android.graphics.drawable.Drawable;
 
 import android.graphics.drawable.Drawable;
 
+import java.io.Serializable;
+
 /**
  * Created by Nelson on 24/05/2016.
  */
-public class Obra {
+public class Obra implements Serializable{
     private int id_obra;
     private String nome;
     private String descricao;

@@ -61,9 +61,9 @@ public class HomeActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.obra_id:
-                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.main_container,new ObraFragment());
-                        fragmentTransaction.commit();
+                        listFragment = getSupportFragmentManager().beginTransaction();
+                        listFragment.replace(R.id.main_container,new ObraFragment());
+                        listFragment.commit();
                         getSupportActionBar().setTitle("Obras");
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
