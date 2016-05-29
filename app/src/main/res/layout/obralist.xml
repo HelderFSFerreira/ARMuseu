@@ -15,10 +15,10 @@
             android:id="@+id/toplay">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:id="@+id/image_museu"
-                android:src="@drawable/m"
+                android:src="@drawable/quadro1"
                 android:padding="5dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
@@ -46,7 +46,7 @@
             android:id="@+id/linearLayout">
 
             <TextView
-                android:layout_width="376dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Hoje ao invés de fazer meus textos costumeiros falando sobre coisas da vida, vim trazer esse texto, que não é autoria minha, e que é de grande importância pra você que é brasileiro."

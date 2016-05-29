@@ -53,11 +53,12 @@ public class MuseuActivity extends Activity {
 
         lv.setAdapter(oAdapter);
 
+
     }
 
     private void carregarObras(){
-        Obra obra1 = new Obra("Obra1","Uma obra muito boa",R.drawable.m);
-        Obra obra2 = new Obra("Obra121323","Uma o321321321bra muito boa",R.drawable.m2);
+        Obra obra1 = new Obra("Quadro Rico","Uma obra muito boa",R.drawable.quadro1);
+        Obra obra2 = new Obra("Quadro Pobre","Uma o321321321bra muito boa",R.drawable.quadro2);
         m.addObra(obra1);
         m.addObra(obra2);
     }
@@ -66,4 +67,6 @@ public class MuseuActivity extends Activity {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
         startActivity(browserIntent);
     }
+
+
 }

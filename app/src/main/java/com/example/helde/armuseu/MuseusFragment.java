@@ -32,7 +32,7 @@ public class MuseusFragment extends ListFragment {
     Museu m = new Museu("Nome","O Museu da Água localiza-se na freguesia de São Vicente, na cidade, concelho e distrito de Lisboa, em Portugal.\n" +
             "\n" +
             "É um museu histórico-cultural mantido pela empresa EPAL, cujo acervo versa sobre a história do abastecimento de água a Lisboa, e está i",R.drawable.m);
-    Museu m2 = new Museu("Nome2","desscricao3",R.drawable.m2);
+    Museu m2 = new Museu("Nome2","É um museu histórico-cultural mantido pela empresa EPAL, cujo acervo versa sobre a história do abastecimento de água a Lisboa, e está i",R.drawable.m2);
 
 
     @Override
