@@ -10,9 +10,9 @@ public class Museu {
     int id_museu;
     String nome;
     String descricao;
-    Drawable imagem;
+    int imagem;
 
-    public Museu(String nome, String descricao, Drawable img){
+    public Museu(String nome, String descricao, int img){
         this.nome = nome;
         this.descricao = descricao;
         this.imagem = img;
@@ -31,7 +31,7 @@ public class Museu {
         return descricao;
     }
 
-    public Drawable getImagem(){
+    public int getImagem(){
         return imagem;
     }
 
@@ -48,7 +48,7 @@ public class Museu {
         this.descricao = desc;
     }
 
-    public void setImagem(Drawable img){
+    public void setImagem(int img){
         this.imagem = img;
     }
 

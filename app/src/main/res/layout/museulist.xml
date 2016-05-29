@@ -38,7 +38,7 @@
             android:paddingTop="10dp"
             android:gravity="center"
             android:text="descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao "
-            android:id="@+id/textView" />
+            android:id="@+id/id_descricao" />
 
     </LinearLayout>
 </RelativeLayout>

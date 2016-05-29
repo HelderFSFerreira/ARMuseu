@@ -46,20 +46,19 @@ public class MuseuAdapter extends BaseAdapter {
 
         if(convertView == null){
             LayoutInflater inf = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            //Ajeitar isto!
-            // v = inf.inflate(R.layout.listaitems, null);
+            v = inf.inflate(R.layout.museulist, null);
         }
 
         Museu museu = museus.get(position);
         Museu dir = museus.get(position);
 
-        ImageView img = (ImageView) v.findViewById(R.id.image_museu);
-        img.setImageDrawable(museu.getImagem());
+        ImageView img = (ImageView) v.findViewById(R.id.id_image_museu);
+        img.setImageResource(museu.getImagem());
 
-        TextView title = (TextView) v.findViewById(R.id.id_museu);
+        TextView title = (TextView) v.findViewById(R.id.id_nome_museu);
         title.setText(museu.getNome());
 
-        TextView descp = (TextView) v.findViewById(R.id.text_desc);
+        TextView descp = (TextView) v.findViewById(R.id.id_descricao);
         descp.setText(museu.getDescricao());
 
         return v;

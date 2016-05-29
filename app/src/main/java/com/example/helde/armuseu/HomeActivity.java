@@ -17,6 +17,7 @@ public class HomeActivity extends AppCompatActivity {
     ActionBarDrawerToggle actionBarDrawerToggle;
     FragmentTransaction fragmentTransaction;
     NavigationView navigationView;
+    FragmentTransaction listFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +53,9 @@ public class HomeActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         break;
                     case R.id.museu_id:
-                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.main_container,new MuseusFragment());
-                        fragmentTransaction.commit();
+                        listFragment = getSupportFragmentManager().beginTransaction();
+                        listFragment.replace(R.id.main_container,new MuseusFragment());
+                        listFragment.commit();
                         getSupportActionBar().setTitle("Museus");
                         item.setChecked(true);
                         drawerLayout.closeDrawers();
