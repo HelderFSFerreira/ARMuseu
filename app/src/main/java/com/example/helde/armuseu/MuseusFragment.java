@@ -26,9 +26,12 @@ public class MuseusFragment extends ListFragment {
     }
 
     ArrayList<Museu> listaMuseus = new ArrayList<Museu>();
+
     MuseuAdapter mAdapter;
 
-    Museu m = new Museu("Nome","desscricao",R.drawable.m);
+    Museu m = new Museu("Nome","O Museu da Água localiza-se na freguesia de São Vicente, na cidade, concelho e distrito de Lisboa, em Portugal.\n" +
+            "\n" +
+            "É um museu histórico-cultural mantido pela empresa EPAL, cujo acervo versa sobre a história do abastecimento de água a Lisboa, e está i",R.drawable.m);
     Museu m2 = new Museu("Nome2","desscricao3",R.drawable.m2);
 
 
@@ -36,8 +39,10 @@ public class MuseusFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_museus, container,false);
+
         listaMuseus.add(m);
         listaMuseus.add(m2);
+
 
         mAdapter = new MuseuAdapter(getActivity(), listaMuseus);
 
@@ -52,7 +57,4 @@ public class MuseusFragment extends ListFragment {
         intent.putExtra("Museu",(Museu) getListView().getItemAtPosition(position));
         startActivityForResult(intent,1);
     }
-
-    //Cenas pqp
-
 }

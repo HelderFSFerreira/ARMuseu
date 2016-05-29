@@ -17,6 +17,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:padding="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/m"
@@ -27,20 +28,33 @@
                 android:layout_height="wrap_content"
                 android:text="Museu da Água!"
                 android:textSize="30dp"
+                android:layout_gravity="center"
                 android:textStyle="bold"
                 android:id="@+id/tituloMuseu" />
+
         </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
+            android:padding="10dp"
             android:layout_height="wrap_content"
             android:text="@string/descricao"
             android:id="@+id/descricaoMuseu" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="15dp"
+            android:src="@drawable/ic_add_shopping_cart_black_24dp"
+            android:id="@+id/imageButton" />
 
         <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/ratingBar"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:layout_gravity="center"/>
 
         <ListView
@@ -48,5 +62,4 @@
             android:layout_height="wrap_content"
             android:id="@+id/list_obras" />
     </LinearLayout>
-
 </RelativeLayout>

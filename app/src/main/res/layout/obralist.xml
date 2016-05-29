@@ -4,63 +4,69 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/toplay">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/image_museu"
-            android:src="@drawable/m"
-            android:padding="5dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/app_name"
-            android:paddingLeft="10dp"
-            android:id="@+id/id_museu" />
-
-    </LinearLayout>
-
-    <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/toplay"
-        android:layout_alignEnd="@+id/toplay"
-        android:id="@+id/linearLayout">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toplay">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image_museu"
+                android:src="@drawable/m"
+                android:padding="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/app_name"
+                android:paddingLeft="20dp"
+                android:textSize="25dp"
+                android:layout_gravity="center"
+                android:id="@+id/id_museu" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Descrição"
-            android:id="@+id/desc"
-            android:layout_alignParentTop="true"
             android:layout_alignRight="@+id/toplay"
             android:layout_alignEnd="@+id/toplay"
-            android:layout_marginRight="52dp"
-            android:layout_marginEnd="52dp"
-            android:layout_marginTop="132dp"
-            android:layout_gravity="center_vertical" />
+            android:padding="10dp"
+            android:id="@+id/linearLayout">
 
-        <TextView
-            android:layout_width="376dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Hoje ao invés de fazer meus textos costumeiros falando sobre coisas da vida, vim trazer esse texto, que não é autoria minha, e que é de grande importância pra você que é brasileiro."
-            android:id="@+id/text_desc"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Descrição"
+                android:id="@+id/desc"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingTop="20dp"
+                android:layout_gravity="center_vertical" />
 
+            <TextView
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Hoje ao invés de fazer meus textos costumeiros falando sobre coisas da vida, vim trazer esse texto, que não é autoria minha, e que é de grande importância pra você que é brasileiro."
+                android:id="@+id/text_desc"
+                android:textSize="10dp"
+                android:paddingTop="10dp"
+                />
+
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

@@ -1,8 +1,13 @@
 package com.example.helde.armuseu;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -15,7 +20,7 @@ import java.util.ArrayList;
 /**
  * Created by helde on 24/05/2016.
  */
-public class MuseuActivity extends AppCompatActivity {
+public class MuseuActivity extends Activity {
     Museu m = null;
 
     TextView titulo;
@@ -55,4 +60,5 @@ public class MuseuActivity extends AppCompatActivity {
         m.addObra(obra1);
         m.addObra(obra2);
     }
+
 }

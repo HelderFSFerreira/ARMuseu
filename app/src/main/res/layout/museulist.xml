@@ -28,6 +28,8 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Large Text"
+                android:layout_gravity="center"
+                android:paddingLeft="20dp"
                 android:id="@+id/id_nome_museu" />
         </LinearLayout>
 
@@ -35,10 +37,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="5dp"
-            android:paddingTop="10dp"
+            android:paddingTop="20dp"
             android:gravity="center"
+            android:padding="20dp"
             android:text="descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao descricao "
             android:id="@+id/id_descricao" />
-
     </LinearLayout>
 </RelativeLayout>
