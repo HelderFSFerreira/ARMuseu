@@ -15,7 +15,8 @@ public class MuseuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.museu_layout);
-        m = (Museu) getIntent().getSerializableExtra("MyClass");
+
+        m = (Museu) getIntent().getSerializableExtra("Museu");
         System.out.println(m.getNome());
     }
 }

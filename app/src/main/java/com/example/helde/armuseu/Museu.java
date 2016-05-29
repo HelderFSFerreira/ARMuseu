@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * Created by Nelson on 24/05/2016.
  */
-public class Museu implements Serializable {
+public class Museu implements Serializable{
     int id_museu;
     String nome;
     String descricao;
