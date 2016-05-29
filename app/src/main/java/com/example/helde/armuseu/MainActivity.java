@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(registerIntent);
             }
         });
-
-
     }
 
     public void btnLogin (View view) {
