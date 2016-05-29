@@ -50,7 +50,7 @@ public class MuseusFragment extends ListFragment {
     public void onListItemClick(ListView l, View v, int position, long id) {
         Toast.makeText(getActivity(), getListView().getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(getActivity(), HomeActivity.class);
+        Intent intent = new Intent(getActivity(), MuseuActivity.class);
         intent.putExtra("Museu",(Museu) getListView().getItemAtPosition(position));
         startActivityForResult(intent,1);
     }
