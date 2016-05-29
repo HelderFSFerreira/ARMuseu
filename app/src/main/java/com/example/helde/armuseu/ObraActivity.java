@@ -17,5 +17,7 @@ public class ObraActivity extends AppCompatActivity {
 
         o = (Obra) getIntent().getSerializableExtra("Obra");
         System.out.println(o.getNome());
+
+        //Cenas pqp!
     }
 }
