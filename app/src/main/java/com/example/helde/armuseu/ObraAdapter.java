@@ -52,7 +52,7 @@ public class ObraAdapter extends BaseAdapter {
         Obra dir = obras.get(position);
 
         ImageView img = (ImageView) v.findViewById(R.id.image_museu);
-        img.setImageDrawable(obra.getImagem());
+        img.setImageResource(obra.getImagem());
 
         TextView title = (TextView) v.findViewById(R.id.id_museu);
         title.setText(obra.getNome());

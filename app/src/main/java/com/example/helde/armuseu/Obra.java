@@ -11,14 +11,12 @@ public class Obra {
     private int id_obra;
     private String nome;
     private String descricao;
-    private Drawable imagem;
-    private int museu;
+    private int imagem;
 
-    public Obra(String name, String descricao, Drawable img,int museu){
+    public Obra(String name, String descricao, int img){
         this.nome = name;
         this.descricao = descricao;
         this.imagem = img;
-        this.museu=museu;
     }
 
     // getters
@@ -35,7 +33,7 @@ public class Obra {
         return descricao;
     }
 
-    public Drawable getImagem(){
+    public int getImagem(){
         return imagem;
     }
 
@@ -53,7 +51,7 @@ public class Obra {
         this.descricao  = desc;
     }
 
-    public void setImagem(Drawable i){
+    public void setImagem(int i){
         this.imagem = i;
     }
 

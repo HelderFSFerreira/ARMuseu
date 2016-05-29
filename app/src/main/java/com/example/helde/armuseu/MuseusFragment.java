@@ -28,7 +28,6 @@ public class MuseusFragment extends ListFragment {
     ArrayList<Museu> listaMuseus = new ArrayList<Museu>();
     MuseuAdapter mAdapter;
 
-
     Museu m = new Museu("Nome","desscricao",R.drawable.m);
     Museu m2 = new Museu("Nome2","desscricao3",R.drawable.m2);
 
@@ -49,7 +48,6 @@ public class MuseusFragment extends ListFragment {
 
     public void onListItemClick(ListView l, View v, int position, long id) {
         Toast.makeText(getActivity(), getListView().getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
-
         Intent intent = new Intent(getActivity(), MuseuActivity.class);
         intent.putExtra("Museu",(Museu) getListView().getItemAtPosition(position));
         startActivityForResult(intent,1);
