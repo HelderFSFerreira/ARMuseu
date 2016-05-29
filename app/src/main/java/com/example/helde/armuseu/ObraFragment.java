@@ -48,7 +48,6 @@ public class ObraFragment extends ListFragment {
     }
 
     public void onListItemClick(ListView l, View v, int position, long id) {
-        Toast.makeText(getActivity(), getListView().getItemAtPosition(position).toString(), Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getActivity(), ObraActivity.class);
         intent.putExtra("Obra",(Obra) getListView().getItemAtPosition(position));
         startActivityForResult(intent,1);

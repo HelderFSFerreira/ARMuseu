@@ -4,13 +4,13 @@
     android:layout_height="match_parent"
     tools:context="com.example.helde.armuseu.ObraFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/obrafragment"
-        android:gravity="center"
-        android:textSize="35dp"
-        android:textStyle="bold"/>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/android:list"
+        android:layout_alignTop="@+id/android:list"
+        android:paddingTop="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </FrameLayout>

@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         if(checkLogin(etLogin.getText().toString(),etPass.getText().toString())){
             Intent intent = new Intent(view.getContext(), HomeActivity.class);
             startActivityForResult(intent,1);
+            finish();
         } else {
             etLogin.setText("");
             etPass.setText("");
