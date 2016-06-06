@@ -30,6 +30,7 @@ public class ObraFragment extends ListFragment {
 
     Obra ob1 = new Obra("Obra Linda","Uma obra muito mas muito linda.Uma obra muito mas muito linda.Uma obra muito mas muito linda.",R.drawable.quadro1);
     Obra ob2 = new Obra("Obra feia","Uma obra muito mas muito feitadadafa.Uma obra muito mas muito linda.Uma obra muito mas muito linda.",R.drawable.quadro2);
+    Obra ob3 = new Obra("Obra Media","Uma obra muito mas muito dada.Uma obra muito mas muito dede.Uma obra muito mas muito lindddaa.",R.drawable.quadro1);
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,6 +39,7 @@ public class ObraFragment extends ListFragment {
 
         listaObras.add(ob1);
         listaObras.add(ob2);
+        listaObras.add(ob3);
 
         obraAdapter = new ObraAdapter(getActivity(), listaObras);
 

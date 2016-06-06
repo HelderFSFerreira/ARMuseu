@@ -29,10 +29,8 @@ public class MuseusFragment extends ListFragment {
 
     MuseuAdapter mAdapter;
 
-    Museu m = new Museu("Nome","O Museu da Água localiza-se na freguesia de São Vicente, na cidade, concelho e distrito de Lisboa, em Portugal.\n" +
-            "\n" +
-            "É um museu histórico-cultural mantido pela empresa EPAL, cujo acervo versa sobre a história do abastecimento de água a Lisboa, e está i",R.drawable.m);
-    Museu m2 = new Museu("Nome2","É um museu histórico-cultural mantido pela empresa EPAL, cujo acervo versa sobre a história do abastecimento de água a Lisboa, e está i",R.drawable.m2);
+    Museu m = new Museu("Museu da Água","O Museu da Água localiza-se na freguesia de São Vicente, na cidade, concelho e distrito de Lisboa, em Portugal." ,R.drawable.m);
+    Museu m2 = new Museu("Museu do Vinho","O Museu do Vinho localiza-se na freguesia de São Baltazar, na cidade, concelho e distrito de Setubal, em Faro.",R.drawable.m2);
 
 
     @Override
@@ -42,7 +40,6 @@ public class MuseusFragment extends ListFragment {
 
         listaMuseus.add(m);
         listaMuseus.add(m2);
-
 
         mAdapter = new MuseuAdapter(getActivity(), listaMuseus);
 

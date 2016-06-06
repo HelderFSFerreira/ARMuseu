@@ -12,7 +12,7 @@
     <string name="homefragment">Home Fragment</string>
     <string name="obrafragment">Obras Fragment</string>
     <string name="museufragment">Museus Fragment</string>
-    <string name="infofragment">Info Fragment</string>
+    <string name="infofragment">"Interação Homem-Maquina\n\n Instituto Politécnico de Viana do Castelo"</string>
     <string name="descricao">O Museu da Água localiza-se na freguesia de São Vicente, na cidade, concelho e distrito de Lisboa, em Portugal.
 
 É um museu histórico-cultural mantido pela empresa EPAL, cujo acervo versa sobre a história do abastecimento de água a Lisboa, e está instalado nas dependências da Estação Elevatória a Vapor dos Barbadinhos, primeira estação de bombagem a vapor da cidade.
@@ -22,5 +22,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txtInicial">Este trabalho foi elaborado por\n
     Helder Ferreira Nº16932\n
-    Nelson Rodrigues Nº ALTERAR</string>
+    Nelson Rodrigues Nº16921</string>
+
+
+    <string name="descricaomuseu1">"O Museu da Água localiza-se na freguesia de São Vicente, na cidade, concelho e distrito de Lisboa, em Portugal."</string>
+    <string name="descricaomuseu2">"O Museu do Vinho localiza-se na freguesia de São Baltazar, na cidade, concelho e distrito de Setubal, em Faro."</string>
+    <string name="descricaomuseu1peq">"lala"</string>
+    <string name="descricaomuseu2peq">"lala"</string>
 </resources>

@@ -37,26 +37,43 @@
         <TextView
             android:layout_width="wrap_content"
             android:padding="10dp"
-            android:layout_height="wrap_content"
+            android:layout_height="106dp"
             android:text="@string/descricao"
             android:id="@+id/descricaoMuseu" />
 
-        <ImageButton
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:padding="15dp"
-            android:src="@drawable/ic_add_shopping_cart_black_24dp"
-            android:id="@+id/imageButton"
-            android:onClick="btnClicarComprar"/>
+            android:layout_height="wrap_content">
 
-        <RatingBar
+            <RatingBar
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginRight="50dp"
+                android:layout_gravity="center"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="15dp"
+                android:src="@drawable/ic_add_shopping_cart_black_24dp"
+                android:id="@+id/imageButton"
+                android:onClick="btnClicarComprar"/>
+
+        </LinearLayout>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ratingBar"
-            android:paddingTop="5dp"
+            android:textSize="25dp"
+            android:paddingLeft="10dp"
             android:paddingBottom="5dp"
-            android:layout_gravity="center"/>
+            android:text="Lista de Obras"
+            android:id="@+id/textView2" />
 
         <ListView
             android:layout_width="wrap_content"

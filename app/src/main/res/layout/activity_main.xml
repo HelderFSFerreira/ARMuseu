@@ -22,12 +22,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/etUser"
         android:hint="UserName"
+        android:singleLine="true"
         android:gravity="center_horizontal"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
+        android:singleLine="true"
         android:id="@+id/etPass"
         android:hint="Password"
         android:gravity="center_horizontal"/>
