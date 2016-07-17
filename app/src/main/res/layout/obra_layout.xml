@@ -10,11 +10,15 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:src="@drawable/m"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="60dp"
+            android:id="@+id/nomedaobra"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
             android:text="Obra X"/>
     </LinearLayout>
 
@@ -26,6 +30,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/descricaoobra"
+            android:padding="10dp"
             android:text="@string/descricao"/>
         <RatingBar
             android:layout_width="wrap_content"
