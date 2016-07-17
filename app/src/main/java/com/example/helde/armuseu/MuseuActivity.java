@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -29,6 +30,8 @@ public class MuseuActivity extends Activity {
     TextView descricao;
     ImageView img;
 
+    ArrayList<Obra> listaObras = new ArrayList<>();
+    ListView lv;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,11 +51,26 @@ public class MuseuActivity extends Activity {
 
         carregarObras();
 
-        ListView lv = (ListView) findViewById(R.id.list_obras);
-        ArrayList<Obra> listaObras = new ArrayList<Obra>();
-        ObraAdapter oAdapter = new ObraAdapter(this, m.getObras());
+        lv = (ListView) findViewById(R.id.list_obras);
+        listaObras = new ArrayList<Obra>();
+        final ObraAdapter oAdapter = new ObraAdapter(this, m.getObras());
 
         lv.setAdapter(oAdapter);
+
+        lv.setOnItemClickListener(
+                new AdapterView.OnItemClickListener()
+                {
+
+                    @Override
+                    public void onItemClick(AdapterView<?> arg0, View view,
+                                            int position, long id) {
+
+                        Intent intent = new Intent(MuseuActivity.this, ObraActivity.class);
+                        intent.putExtra("Obra",(Obra) lv.getItemAtPosition(position));
+                        startActivityForResult(intent,1);
+                    }
+                }
+        );
 
 
     }
@@ -67,13 +85,6 @@ public class MuseuActivity extends Activity {
     public void btnClicarComprar(View view) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
         startActivity(browserIntent);
-    }
-
-    public void onListItemClick(ListView l, View v, int position, long id) {
-
-        //Intent intent = new Intent(this, MuseuActivity.class);
-        //intent.putExtra("Museu",(Museu) getListView().getItemAtPosition(position));
-        //startActivityForResult(intent,1);
     }
 
 

@@ -1,5 +1,6 @@
 package com.example.helde.armuseu;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 /**
  * Created by Nelson on 24/05/2016.
  */
-public class ObraActivity extends AppCompatActivity {
+public class ObraActivity extends Activity {
     Obra o = null;
 
     TextView titulo;
