@@ -1,6 +1,7 @@
 package com.example.helde.armuseu;
 
 import android.app.Activity;
+import android.app.ListActivity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -66,6 +67,13 @@ public class MuseuActivity extends Activity {
     public void btnClicarComprar(View view) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
         startActivity(browserIntent);
+    }
+
+    public void onListItemClick(ListView l, View v, int position, long id) {
+
+        //Intent intent = new Intent(this, MuseuActivity.class);
+        //intent.putExtra("Museu",(Museu) getListView().getItemAtPosition(position));
+        //startActivityForResult(intent,1);
     }
 
 
