@@ -17,8 +17,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/nomedaobra"
             android:textSize="30dp"
-            android:layout_gravity="center"
             android:paddingLeft="20dp"
+            android:layout_gravity="center"
+
             android:text="Obra X"/>
     </LinearLayout>
 
