@@ -2,12 +2,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.helde.armuseu.MuseusFragment">
+    tools:context="com.example.helde.armuseu.MuseusFragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista de Museus"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#4169E1"
+        android:typeface="monospace"
+        />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/android:list"
-        android:paddingTop="50dp"/>
+        android:paddingTop="50dp"
+        />
 
 </LinearLayout>
