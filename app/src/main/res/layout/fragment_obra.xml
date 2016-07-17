@@ -11,7 +11,10 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Lista de Obras de Arte"
         android:paddingLeft="10dp"
-        android:paddingTop="5dp"
+        android:gravity="center"
+        android:typeface="monospace"
+        android:textColor="#4169E1"
+        android:layout_marginTop="16dp"
         android:textSize="25dp"
         android:id="@+id/textView3" />
 

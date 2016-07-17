@@ -32,7 +32,6 @@ public class MuseusFragment extends ListFragment {
     Museu m = new Museu("Museu da Água","O Museu da Água localiza-se na freguesia de São Vicente, na cidade, concelho e distrito de Lisboa, em Portugal." ,R.drawable.m);
     Museu m2 = new Museu("Museu do Vinho","O Museu do Vinho localiza-se na freguesia de São Baltazar, na cidade, concelho e distrito de Setubal, em Faro.",R.drawable.m2);
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
